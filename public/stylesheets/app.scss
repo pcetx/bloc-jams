@@ -65,7 +65,6 @@ body.landing {
   .album-header-container {
    margin-top: 55px;
    margin-bottom: 40px;
-   color:white;
  }
  
  // This styles the right side of our Album Header
@@ -101,17 +100,12 @@ body.landing {
  .table.album-song-listing {
    // Override the font for the entire table.
    font-weight: 300;
-   color: white;
  }
  
    // Override the defaults that Bootstrap sets.
  .table.album-song-listing  td {
    padding: 20px;
    border-top: 1px solid rgba(255, 255, 255, .4);
- }
-
- .table{
-  color: white;
  }
 
 
