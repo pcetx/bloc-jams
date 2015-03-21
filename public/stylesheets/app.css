@@ -10,7 +10,6 @@ body {
 
 body.landing {
   background: #5b5579;
-  color: white; 
 }
 
 .hero-content {
@@ -46,7 +45,8 @@ body.landing {
 }
 
 .selling-points .point p {
-  font-size: 14px; }
+  font-size: 14px; 
+}
 
  // medium-purple: #7B46A3 - 123, 70, 163
  //
@@ -65,7 +65,7 @@ body.landing {
   .album-header-container {
    margin-top: 55px;
    margin-bottom: 40px;
-   color:white;
+   color: white;
  }
  
  // This styles the right side of our Album Header
@@ -101,7 +101,6 @@ body.landing {
  .table.album-song-listing {
    // Override the font for the entire table.
    font-weight: 300;
-   color: white;
  }
  
    // Override the defaults that Bootstrap sets.
