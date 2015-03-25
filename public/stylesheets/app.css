@@ -24,8 +24,7 @@ body.landing {
   color: white; }
 
 .selling-points {
-  padding: 100px 0;
-  height: 200px; }
+  padding: 100px 0; }
 
 .selling-points .point {
   width: 32%;
@@ -42,7 +41,7 @@ body.landing {
 
 .selling-points .point p {
   font-size: 14px;
-  color: black; }
+  color: white; }
 
 .player-header-nav {
   background-color: rgba(123, 70, 163, 0.9); }
