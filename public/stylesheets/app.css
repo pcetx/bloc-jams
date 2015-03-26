@@ -12,6 +12,11 @@ body.landing {
   background: #5b5579;
   color: white; }
 
+.hero-content h3 {
+  transition: 1s; }
+  .hero-content h3.active {
+    color: red; }
+
 .hero-content {
   background: #2f1d57;
   padding: 100px 0;

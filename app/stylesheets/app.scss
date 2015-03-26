@@ -13,6 +13,13 @@ body.landing {
   color: white; 
 }
 
+.hero-content h3{
+  transition: 1s;
+  &.active{
+    color: red;
+  }
+}
+
 .hero-content {
   background: #2f1d57;
   padding: 100px 0;
