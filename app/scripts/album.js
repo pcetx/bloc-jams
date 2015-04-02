@@ -82,11 +82,11 @@
 
     changeAlbumView(albumPicasso);
 
-    var albumList = {albumPicasso, albumMarconi};
+    var albumList = [albumPicasso, albumMarconi];
 
     $('.col-md-3').click(function(){
-      //Toggle to the next item int he array
-      
+      changeAlbumView(albumList[1]);
+
     });
 
    });
