@@ -226,8 +226,8 @@ require.register("scripts/album", function(exports, require, module) {
 
     $('.col-md-3').click(function(){
       changeAlbumView(albumList[1]);
-
     });
+
 
    });
  }

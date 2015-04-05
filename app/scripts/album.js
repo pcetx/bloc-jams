@@ -133,8 +133,8 @@
 
     $('.col-md-3').click(function(){
       changeAlbumView(albumList[1]);
-
     });
+
 
    });
  }
