@@ -57,6 +57,13 @@
      $(this).append(buildAlbumOverlay("/album.html"));
    };
 
+  var offHover = function(event) {
+    $(this).find('.collection-album-image-overlay').remove();
+  };
+
+  $collection.find('.collection-album-image-container').hover(onHover, offHover);
+
+
  };
  
 
