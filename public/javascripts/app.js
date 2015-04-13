@@ -318,6 +318,12 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
      controller: 'Collection.controller',
      templateUrl: '/templates/collection.html'
    });
+ 
+   $stateProvider.state('album', {
+     url: '/album',
+     templateUrl: '/templates/album.html',
+     controller: 'Album.controller'
+   });
 
 }]);
   
@@ -343,6 +349,11 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
      '/images/album-placeholders/album-9.jpg',
    ];
 
+   function shuffle(o){ //v1.0
+     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+     return o;
+   };
+
    $scope.mainTextClicked = function() {
      shuffle($scope.albumURLs);
    };
@@ -356,12 +367,44 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
       }
  }]);
 
-function shuffle(o){ //v1.0
-  for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-  return o;
-};
+ blocJams.controller('Album.controller', ['$scope', function($scope) {
+   $scope.album = angular.copy(albumPicasso);
 
-shuffle([1,2,3]);
+     var hoveredSong = null;
+     var playingSong = null;
+   
+     $scope.onHoverSong = function(song) {
+       hoveredSong = song;
+     };
+   
+     $scope.offHoverSong = function(song) {
+       hoveredSong = null;
+     };
+
+     $scope.getSongState = function(song) {
+       if (song === playingSong) {
+         return 'playing';
+       }
+       else if (song === hoveredSong) {
+         return 'hovered';
+       }
+       return 'default';
+     };
+
+ 
+      $scope.playSong = function(song) {
+        playingSong = song;
+      };
+   
+      $scope.pauseSong = function(song) {
+        playingSong = null;
+      };
+
+ }]);
+
+
+
+
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
