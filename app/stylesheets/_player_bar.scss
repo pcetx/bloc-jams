@@ -3,14 +3,18 @@
 *   Player bar for when song is on
 */
 
+$navbar-purple: #73409c;
+
+
  .player-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: 150px;
-    background: rgba(255, 255, 255, 0.3);
+    background-color: $navbar-purple;
     z-index: 100;
+    color:white;
  
     a, a:hover {
       color: white;

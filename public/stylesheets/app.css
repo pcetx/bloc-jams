@@ -146,8 +146,9 @@ td.song-number {
   left: 0;
   right: 0;
   height: 150px;
-  background: rgba(255, 255, 255, 0.3);
-  z-index: 100; }
+  background-color: #73409c;
+  z-index: 100;
+  color: white; }
   .player-bar a, .player-bar a:hover {
     color: white;
     cursor: pointer;
