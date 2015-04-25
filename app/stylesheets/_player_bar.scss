@@ -156,7 +156,6 @@ $navbar-purple: #73409c;
       transition: all 100ms ease-in-out;
     }
  
-    &.no-animate {
     &:active {
       .fill, .thumb {
         transition: none;

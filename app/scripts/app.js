@@ -193,27 +193,7 @@ blocJams.service('SongPlayer', function() {
        offsetXPercent = Math.max(0, offsetXPercent);
        offsetXPercent = Math.min(1, offsetXPercent);
        return offsetXPercent;
-     }
-
-    scope.onClickSlider = function(event) {
-     var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
-     scope.value = percent * scope.max;
-     }
-
-     scope.trackThumb = function() {
-     $document.bind('mousemove.thumb', function(event){
-       var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
-       scope.$apply(function(){
-         scope.value = percent * scope.max;
-       });
-     });
-
-     //cleanup
-     $document.bind('mouseup.thumb', function(){
-       $document.unbind('mousemove.thumb');
-       $document.unbind('mouseup.thumb');
-     });
-   };
+     };
 
   return {
     templateUrl: '/templates/directives/slider.html',
@@ -241,8 +221,25 @@ blocJams.service('SongPlayer', function() {
          return {left: percentString()};
        }
 
+       scope.onClickSlider = function(event) {
+       var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
+       scope.value = percent * scope.max;
+       }
+
+       scope.trackThumb = function() {
+         $document.bind('mousemove.thumb', function(event){
+           var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
+           scope.$apply(function(){
+             scope.value = percent * scope.max;
+           });
+         });
+
+         //cleanup
+         $document.bind('mouseup.thumb', function(){
+           $document.unbind('mousemove.thumb');
+           $document.unbind('mouseup.thumb');
+         });
+      };  
     }
   }
 }]); // Make sure to close out the parentheses and brackets
-
-
