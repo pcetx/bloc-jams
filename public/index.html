@@ -4,6 +4,7 @@
  <html ng-app="BlocJams">
   <head>
     <title>Bloc Jams</title>    
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
      <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300' rel='stylesheet' type='text/css'>   
@@ -11,11 +12,16 @@
     <link href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' rel='stylesheet' />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
          <script src="//cdnjs.cloudflare.com/ajax/libs/buzz/1.1.0/buzz.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+      <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+      <script>
+      var myDataRef = new Firebase('https://cjgyjv2czmo.firebaseio-demo.com/');
+      </script>
       <script src="/javascripts/vendor.js"></script>
       <script src="/javascripts/app.js"></script>
       <script>
@@ -30,9 +36,17 @@
              <img src="/images/blocjams.png">
            </a>
          </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a ui-sref='collection'>Library</a></li>
-            </ul>
+            <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+              <span class = "icon-bar"></span>
+              <span class = "icon-bar"></span>
+              <span class = "icon-bar"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a ui-sref='collection'>Library</a></li>
+              </ul>
+            </div>  
        </div>
      </nav>
 

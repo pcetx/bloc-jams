@@ -1,7 +1,8 @@
 .hero-content {
-  background: #2f1d57;
+  background: purple;
   padding: 100px 0;
   color: white; 
+  margin-top: -20px;
 
   h1 {
     font-size: 70px;
@@ -39,6 +40,8 @@
     p {
       font-size: 14px; 
       color:white;
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 }

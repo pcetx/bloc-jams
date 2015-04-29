@@ -1,7 +1,8 @@
 .hero-content {
-  background: #2f1d57;
+  background: purple;
   padding: 100px 0;
-  color: white; }
+  color: white;
+  margin-top: -20px; }
   .hero-content h1 {
     font-size: 70px;
     margin-bottom: 50px;
@@ -27,7 +28,9 @@
       color: white; }
     .selling-points .point p {
       font-size: 14px;
-      color: white; }
+      color: white;
+      padding-left: 50px;
+      padding-right: 50px; }
 
 .album-header-container {
   margin-top: 55px;
@@ -384,6 +387,25 @@ td.song-number {
 .no-right-gutter {
   padding-right: 0px; }
 
+@media (max-width: 768px) {
+  /*.player-header-nav {
+    .navbar-nav {
+      .navbar {
+        background: red;
+      }
+    }
+  }*/
+  .selling-points .point {
+    width: 100%;
+    clear: both;
+    padding-bottom: 50px; }
+  .selling-points .point p {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px; }
+  player-header-nav.navbar-nav.nav {
+    background: black; } }
+
 html {
   height: 100%; }
 
@@ -401,7 +423,10 @@ body.landing {
   padding-bottom: 0; }
 
 .player-header-nav {
-  background-color: rgba(123, 70, 163, 0.9); }
+  background-color: rgba(123, 70, 163, 0.9);
+  padding: 5px; }
+  .player-header-nav .navbar-nav .navbar {
+    margin-bottom: 0px !important; }
   .player-header-nav .navbar-nav a {
     line-height: 45px;
     color: white;
@@ -412,8 +437,11 @@ body.landing {
       color: rgba(123, 70, 163, 0.9); }
 
 body.landing .navbar {
-  margin-bottom: 0;
+  margin-bottom: 0px;
   background-color: #7a459b; }
+
+.img-responsive {
+  margin-bottom: 30px; }
 
 
 /*# sourceMappingURL=app.css.map*/

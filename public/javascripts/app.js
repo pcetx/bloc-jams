@@ -436,6 +436,8 @@ blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($s
      currentAlbum: null,
      playing: false,
        volume: 90,
+       mutedvolume: null,
+       muted: false,
 
      play: function() {
        this.playing = true;
@@ -483,15 +485,18 @@ blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($s
        this.volume = volume;
      },
      mute: function() {
-       var muted = false;
-       var volume = SongPlayer.volume;
+       console.log("Before the if");
 
-       if (volume !== 0) {
-          muted = true;
-          SongPlayer.setVolume(0);
+       if (this.muted === false && this.volume != 0 ){
+          console.log("muted set to true");
+          this.mutedvolume = this.volume; 
+          this.setVolume(0);
+          this.muted = true;
        } else {
-          muted = false;
-          SongPlayer.setVolume(volume);
+          console.log("muted set to false");
+          this.setVolume(this.mutedvolume);
+          this.muted = false;
+          this.mutedvolume = this.volume;
        }
      },
      setSong: function(album, song) {

@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+
+  div.point.col-md-4{
+  }
+
+  .selling-points .point {
+    width: 100%;
+    clear: both;
+    padding-bottom: 50px;
+  }
+
+  .selling-points .point p {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /*.player-header-nav {
+    .navbar-nav {
+      .navbar {
+        background: red;
+      }
+    }
+  }*/
+
+  player-header-nav.navbar-nav.nav {
+    background: black;
+  }
+  
+}
+
+
+
+
