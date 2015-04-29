@@ -2,9 +2,6 @@
 
   /* Mobile styles for the landing page */
 
-  div.point.col-md-4{
-  }
-
   .selling-points .point {
     width: 100%;
     clear: both;
@@ -17,40 +14,64 @@
     padding-right: 50px;
   }
 
-  /*.player-header-nav {
-    .navbar-nav {
-      .navbar {
-        background: red;
-      }
-    }
-  }*/
-
-  player-header-nav.navbar-nav.nav {
-    background: black;
-  }
-
   /* Mobile styles for the Collections */
 
-  .collection-album-container img{
+  .collection-album-container 
+    img{
     width: 95%;
     margin-left: 10px;
     margin-right: 25px;
-  }  
-
-  .collection-album-container .caption {
+    }
+    .caption {
     text-align: center;
-  }
+    }
+  }  
 
   /* Mobile styles for the Player Bar */
 
   .player-bar{
-    height: 160px;
-  }
-
-  .player-bar .container {
-    display: block;
-    padding: 20px;
     height: 200px;
+
+    .container {
+      display: block;
+      padding: 20px;
+      height: 200px;
+    }
+
+    .currently-playing {
+      display: block;
+      width: 100%;
+      padding-bottom: 50px;
+      padding-top: 50px;
+
+        .song-name{
+          top: 10;
+        }
+
+        .artist-name{
+          bottom: 10;
+        }
+    }
+
+    .left-controls {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .right-controls {
+      width: 100%;
+      display: block;
+      float: left;
+    }
+
+    .queue-toggle i {
+      float: right;
+    }
+
+    .volume {
+      float: left;
+    }
   }
 
   .player-bar-control-group {
@@ -58,29 +79,6 @@
     width: 100%;
     text-align: center;
   }
-
-  .player-bar .currently-playing {
-    display: block;
-    width: 100%;
-    padding-bottom: 30px;
-    padding-top: 20px;
-  }
-
-  .player-bar .left-controls {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .player-bar .left-controls {
-    width: 100%;
-    display: block;
-  }
-
-  .player-bar .queue-toggle i {
-    float: right;
-  }
-
 }
 
 
