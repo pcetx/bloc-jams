@@ -46,3 +46,17 @@
   }
 }
 
+#loading-bar .bar {
+background: #33ba3a;
+height: 10px;
+}
+
+#loading-bar-spinner .spinner-icon {
+width: 18px;
+height: 18px;
+border: solid 4px transparent;
+border-top-color: red;
+border-left-color: red;
+border-radius: 10px;
+}
+

@@ -303,7 +303,6 @@ require.register("scripts/album", function(exports, require, module) {
  
  
 blocJams = angular.module('BlocJams', ['ui.router']);
-angular.module('myApp', ['angular-loading-bar', 'ngAnimate'])
 
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
@@ -745,6 +744,22 @@ $(document).ready(function() {
 
     $('.hero-content h1').click(function(){
       $(this).fadeToggle(1000);
+    });
+
+    // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
+    var mainbottom = $('#hero-content').offset().top + $('#hero-content').height();
+
+    // on scroll, 
+    $(window).on('scroll',function(){
+
+        // we round here to reduce a little workload
+        stop = Math.round($(window).scrollTop());
+        if (stop > mainbottom) {
+            $('.navbar').addClass('past-main');
+        } else {
+            $('.navbar').removeClass('past-main');
+       }
+
     });
 
     /*$( '.hero-content h3').hover(

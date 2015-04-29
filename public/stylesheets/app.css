@@ -32,6 +32,18 @@
       padding-left: 50px;
       padding-right: 50px; }
 
+#loading-bar .bar {
+  background: #33ba3a;
+  height: 10px; }
+
+#loading-bar-spinner .spinner-icon {
+  width: 18px;
+  height: 18px;
+  border: solid 4px transparent;
+  border-top-color: red;
+  border-left-color: red;
+  border-radius: 10px; }
+
 .album-header-container {
   margin-top: 55px;
   margin-bottom: 40px;
@@ -388,6 +400,7 @@ td.song-number {
   padding-right: 0px; }
 
 @media (max-width: 768px) {
+  /* Mobile styles for the landing page */
   /*.player-header-nav {
     .navbar-nav {
       .navbar {
@@ -395,6 +408,8 @@ td.song-number {
       }
     }
   }*/
+  /* Mobile styles for the Collections */
+  /* Mobile styles for the Player Bar */
   .selling-points .point {
     width: 100%;
     clear: both;
@@ -404,7 +419,37 @@ td.song-number {
     padding-left: 50px;
     padding-right: 50px; }
   player-header-nav.navbar-nav.nav {
-    background: black; } }
+    background: black; }
+  .collection-album-container img {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 25px; }
+  .collection-album-container .caption {
+    text-align: center; }
+  .player-bar {
+    height: 160px; }
+  .player-bar .container {
+    display: block;
+    padding: 20px;
+    height: 200px; }
+  .player-bar-control-group {
+    display: inline;
+    width: 100%;
+    text-align: center; }
+  .player-bar .currently-playing {
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 20px; }
+  .player-bar .left-controls {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .player-bar .left-controls {
+    width: 100%;
+    display: block; }
+  .player-bar .queue-toggle i {
+    float: right; } }
 
 html {
   height: 100%; }
