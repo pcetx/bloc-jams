@@ -1,86 +1,111 @@
 @media (max-width: 768px) {
 
-  /* Mobile styles for the landing page */
+    /* Mobile styles for the landing page */
 
-  .selling-points .point {
-    width: 100%;
-    clear: both;
-    padding-bottom: 50px;
-  }
-
-  .selling-points .point p {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  /* Mobile styles for the Collections */
-
-  .collection-album-container 
-    img{
-    width: 95%;
-    margin-left: 10px;
-    margin-right: 25px;
-    }
-    .caption {
-    text-align: center;
-    }
-  }  
-
-  /* Mobile styles for the Player Bar */
-
-  .player-bar{
-    height: 200px;
-
-    .container {
-      display: block;
-      padding: 20px;
-      height: 200px;
-    }
-
-    .currently-playing {
-      display: block;
+    .selling-points .point {
       width: 100%;
+      clear: both;
       padding-bottom: 50px;
-      padding-top: 50px;
-
-        .song-name{
-          top: 10;
-        }
-
-        .artist-name{
-          bottom: 10;
-        }
     }
 
-    .left-controls {
-      display: block;
+    .selling-points .point p {
       width: 100%;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .navbar-toggle .icon-bar {
+      background: black;
+    }
+
+    /* Mobile styles for the Collections */
+
+    .collection-album-container 
+      img{
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 25px;
+      }
+      .caption {
+        text-align: center;
+      } 
+
+    /* Mobile styles for the Albums */
+
+    .album-header-information {
       text-align: center;
     }
 
-    .right-controls {
+    div.col-md-3 img {
+      margin-left: 10%;
+    }
+
+    /* Mobile styles for the Player Bar */
+
+    .player-bar{
+      height: 200px;
+
+      .container {
+        display: block;
+        padding: 20px;
+        height: 200px;
+      }
+
+        .currently-playing {
+          display: block;
+          width: 100%;
+          padding-bottom: 50px;
+          padding-top: 50px;
+
+            .song-name{
+              top: 10;
+            }
+
+            .artist-name{
+              bottom: 10;
+            }
+        }
+
+      .left-controls {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .right-controls {
+        width: 100%;
+        display: block;
+        float: left;
+      }
+
+      .queue-toggle i {
+        float: right;
+      }
+
+      .volume {
+        float: left;
+      }
+    }
+
+    .player-bar-control-group {
+      display: inline;
       width: 100%;
-      display: block;
-      float: left;
+      text-align: center;
     }
+} 
 
-    .queue-toggle i {
-      float: right;
-    }
 
-    .volume {
-      float: left;
-    }
-  }
-
-  .player-bar-control-group {
-    display: inline;
-    width: 100%;
-    text-align: center;
-  }
+.navbar-toggle {
+  margin-top: -50px !important;
 }
 
+.navbar-toggle:hover {
+  opacity: 0.3;
+  -webkit-transition: width 0.3s; /* Safari */
+  transition-duration: 0.3s;
+  -webkit-timing-function: ease-in-out; /* Safari */
+  transition-timing-function: ease-in-out;
+}
 
 
 

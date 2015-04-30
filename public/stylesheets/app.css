@@ -401,14 +401,8 @@ td.song-number {
 
 @media (max-width: 768px) {
   /* Mobile styles for the landing page */
-  /*.player-header-nav {
-    .navbar-nav {
-      .navbar {
-        background: red;
-      }
-    }
-  }*/
   /* Mobile styles for the Collections */
+  /* Mobile styles for the Albums */
   /* Mobile styles for the Player Bar */
   .selling-points .point {
     width: 100%;
@@ -418,45 +412,61 @@ td.song-number {
     width: 100%;
     padding-left: 50px;
     padding-right: 50px; }
-  player-header-nav.navbar-nav.nav {
+  .navbar-toggle .icon-bar {
     background: black; }
   .collection-album-container img {
     width: 95%;
     margin-left: 10px;
     margin-right: 25px; }
-  .collection-album-container .caption {
+  .caption {
     text-align: center; }
+  .album-header-information {
+    text-align: center; }
+  div.col-md-3 img {
+    margin-left: 10%; }
   .player-bar {
     height: 200px; }
-  .player-bar .container {
-    display: block;
-    padding: 20px;
-    height: 200px; }
+    .player-bar .container {
+      display: block;
+      padding: 20px;
+      height: 200px; }
+    .player-bar .currently-playing {
+      display: block;
+      width: 100%;
+      padding-bottom: 50px;
+      padding-top: 50px; }
+      .player-bar .currently-playing .song-name {
+        top: 10; }
+      .player-bar .currently-playing .artist-name {
+        bottom: 10; }
+    .player-bar .left-controls {
+      display: block;
+      width: 100%;
+      text-align: center; }
+    .player-bar .right-controls {
+      width: 100%;
+      display: block;
+      float: left; }
+    .player-bar .queue-toggle i {
+      float: right; }
+    .player-bar .volume {
+      float: left; }
   .player-bar-control-group {
     display: inline;
     width: 100%;
-    text-align: center; }
-  .player-bar .currently-playing {
-    display: block;
-    width: 100%;
-    padding-bottom: 50px;
-    padding-top: 50px; }
-  .player-bar .left-controls {
-    display: block;
-    width: 100%;
-    text-align: center; }
-  .player-bar .right-controls {
-    width: 100%;
-    display: block;
-    float: left; }
-  .player-bar .currently-playing .song-name {
-    top: 10; }
-  .player-bar .currently-playing .artist-name {
-    bottom: 10; }
-  .player-bar .queue-toggle i {
-    float: right; }
-  .player-bar .volume {
-    float: left; } }
+    text-align: center; } }
+
+.navbar-toggle {
+  margin-top: -50px !important; }
+
+.navbar-toggle:hover {
+  opacity: 0.3;
+  -webkit-transition: width 0.3s;
+  /* Safari */
+  transition-duration: 0.3s;
+  -webkit-timing-function: ease-in-out;
+  /* Safari */
+  transition-timing-function: ease-in-out; }
 
 html {
   height: 100%; }

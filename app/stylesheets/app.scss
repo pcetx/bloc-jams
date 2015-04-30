@@ -5,6 +5,7 @@
   @import "buttons";
   @import "profile";
   @import "mobile-landing";
+  @import "animations";
 
 //$navbar-purple: #73409c;
 //$base-font-size: 16px;
@@ -36,6 +37,7 @@ body.landing {
  .player-header-nav {
    background-color: rgba(123, 70, 163, .9);
    padding: 5px;
+
     .navbar-nav {
       .navbar {
         margin-bottom: 0px !important;
