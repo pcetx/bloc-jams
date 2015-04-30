@@ -9,10 +9,12 @@
     margin-bottom: 50px;
     font-weight: 300; 
     color: white;
+    visibility: hidden;
   }
 
   h3{
     transition: 1s;
+    visibility: hidden;
     &.active{
       color: red;
     }

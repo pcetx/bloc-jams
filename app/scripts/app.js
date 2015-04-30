@@ -22,6 +22,8 @@
  
  
 blocJams = angular.module('BlocJams', ['ui.router']);
+angular.module('myModule', ['ui.bootstrap']);
+
 
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
