@@ -9,17 +9,18 @@
      <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300' rel='stylesheet' type='text/css'>   
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.css' type='text/css' media='all' />
-    <link rel="stylesheet" href="../app/stylesheets/animations.css">
-    <link rel="stylesheet" href="../app/stylesheets/animate.css">
-
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.js'></script>
+    <link rel="stylesheet" type="text/css" href="../app/stylesheets/animations.css">
+    <link rel="stylesheet" type="text/css" href="../app/stylesheets/animate.css">
     
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
          <script src="//cdnjs.cloudflare.com/ajax/libs/buzz/1.1.0/buzz.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap.min.js
+"></script>
 
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.js'></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
       <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
       <script>
@@ -30,6 +31,8 @@
       <script>
          require('/scripts/app');
       </script>
+
+
   </head>
    <body>
       <nav class="player-header-nav navbar">
@@ -39,16 +42,17 @@
              <img src="/images/blocjams.png">
            </a>
          </div>
-         
-            <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+            <button class="navbar-toggle" ng-init="navCollapsed = false" ng-click="navCollapsed = !navCollapsed">
               <span class = "icon-bar"></span>
               <span class = "icon-bar"></span>
               <span class = "icon-bar"></span>
             </button>
 
-            <div class = "collapse navbar-collapse navHeaderCollapse">
+            <div collapse="navCollapsed" class="nav-collapse collapse navbar-responsive-collapse">
               <ul class="nav navbar-nav navbar-right">
                   <li><a ui-sref='collection'>Library</a></li>
+                  <li><a ui-sref='collection'>Playlists</a></li>
+                  <li><a ui-sref='collection'>Profile</a></li>
               </ul>
             </div>  
        </div>

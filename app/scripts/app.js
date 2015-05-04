@@ -21,9 +21,7 @@
  };
  
  
-blocJams = angular.module('BlocJams', ['ui.router']);
-angular.module('myModule', ['ui.bootstrap']);
-
+blocJams = angular.module('BlocJams', ['ui.router','ui.bootstrap','angular-loading-bar']);
 
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);

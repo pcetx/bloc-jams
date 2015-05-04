@@ -25,8 +25,14 @@
 
      <div class="landing-album-list container">
        <div class="row">
-         <div class="col-md-4" ng-repeat="albumURL in albumURLs">
-           <img class="img-responsive" width="520px" height="520px" ng-src="{{albumURL}}">
+         <div class="card col-md-4" ng-repeat="albumURL in albumURLs">
+           <div class="front-face">
+             <img class="img-responsive" width="520px" height="520px" ng-src="{{albumURL}}">
+           </div>
+           <div class="back-face">
+            <p>This is nice information about the image.</p>
+            <p>Some content can go here.</p>
+          </div>
          </div>
        </div>
      </div>
